@@ -10,11 +10,11 @@ perl ./SNPC.pl [options]
 		--percent	=> 	Similarity percentage cut	[97]
 		--nind	=>	Number of individuals	[100]
 
-## DESCRIPTION
+## Description
 
 Perl software to cluster SNPs based on its genotype. 
-Genotypes should be written in `(a,h,b)`, `(a,c)`, `(b,d)` format, `"-"` for No Call or genotype calls as 0,1,2 and -1 for No Call.
+Genotypes should be written in (a,h,b), (a,c), (b,d) format, "-" for No Call or genotype calls as 0,1,2 and -1 for No Call.
 
-## AUTHOR
+## Author
 
 Jose M. Hidalgo-Lopez - chema.hl@gmail.com
