@@ -16,9 +16,9 @@ perl ./SNPC.pl [options]
 
 	Options:
 		--file		=>	Input data file.
-		--outputdir	=>	Output directory.	[./]
+		--outputdir	=>	Output directory.		[./]
 		--percent	=> 	Similarity percentage cut	[97]
-		--nind	=>	Number of individuals	[100
+		--nind		=>	Number of individuals		[100]
 
 =head1 DESCRIPTION
 
@@ -48,10 +48,10 @@ my @outarray;
 my @cluster;
 
 #------------Argument passing------------#
-GetOptions (			"file=s"   => \$file,      # string
-				"outputdir=s"   => \$outputdir,      # string
-				"nind=i" => \$nind,    # numeric
-				"percent=i" => \$percent,    # numeric
+GetOptions (			"file=s"   => \$file,      	# string
+				"outputdir=s"   => \$outputdir,	# string
+				"nind=i" => \$nind,    		# numeric
+				"percent=i" => \$percent,    	# numeric
 				)
 				or die("Error in command line arguments\n");
 				
@@ -116,8 +116,8 @@ for ($i = 0; $i < scalar @array;) {
 		$percinv=(($invers+$gaps)/$nind)*100;
 		if (( $perc > "$percent" ) || ( $perc eq "100" ))  {
 			$array[$b]= join("\t",$id1,"NORMAL",$array[$b]);
-			push(@cluster, $array[$b]); # A la variable Cluster es guarden els SNPs a descartar.
-			splice(@array, $b, 1);		# S'elimina l'SNP idéntic
+			push(@cluster, $array[$b]); 	# SNPs to be discarded are saved in @cluster.
+			splice(@array, $b, 1);		# SNPs matching are removed.
 			$b--;
 		}
 		elsif (( $percinv > "$percent" ) || ( $percinv eq "100" ))  
