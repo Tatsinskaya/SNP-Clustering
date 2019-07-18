@@ -13,7 +13,7 @@ perl ./SNPC.pl [options]
 ## DESCRIPTION
 
 Perl software to cluster SNPs based on its genotype. 
-Genotypes should be written in (a,h,b), (a,c), (b,d) format, "-" for No Call or genotype calls as 0,1,2 and -1 for No Call.
+Genotypes should be written in `(a,h,b)`, `(a,c)`, `(b,d)` format, `"-"` for No Call or genotype calls as 0,1,2 and -1 for No Call.
 
 ## AUTHOR
 
